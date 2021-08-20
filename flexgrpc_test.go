@@ -53,10 +53,3 @@ func equal(t *testing.T, got, want interface{}) {
 		t.Fatalf("got: %#[1]v (%[1]T), but wanted: %#[2]v (%[2]T)", got, want)
 	}
 }
-
-func notEqual(t *testing.T, got, want interface{}) {
-	t.Helper()
-	if reflect.DeepEqual(got, want) {
-		t.Fatalf("got: %#[1]v (%[1]T), but wanted: %#[2]v (%[2]T)", got, want)
-	}
-}
